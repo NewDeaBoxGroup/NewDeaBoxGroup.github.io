@@ -1,5 +1,6 @@
 ---
 layout: default
+title: {{ page.title | replace: "1#", "[1월 실적]" | replace: "2#", "[2월 실적]" | replace: "3#", "[3월 실적]" | replace: "4#", "[4월 실적]" | replace: "5#", "[5월 실적]" | replace: "6#", "[6월 실적]" | replace: "7#", "[7월 실적]" | replace: "8#", "[8월 실적]" | replace: "9#", "[9월 실적]" | replace: "10#", "[10월 실적]" | replace: "11#", "[11월 실적]" | replace: "12#", "[12월 실적]" }}
 ---
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
