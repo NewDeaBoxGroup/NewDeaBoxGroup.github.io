@@ -14,21 +14,26 @@ layout: default
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
 
-<div class="section no-pad indigo">
+<div class="parallax-container" id="#index-banner">
+  <div class="section no-pad">
   <div class="valign-wrapper" style="height: 380px;">
     <div class="container">
-      <h1 class="row center white-text logo-font">{{ site.title }}</h1>
+      <h1 class="row center white-text logo-font" style="text-shadow:rgba(0,0,0,0.2) 0 2px 1px;">{{ site.title }}</h1>
       <div class="row center">
-        <h5 class="col s12 white-text logo-font">{{ site.description }}</h5>
+        <h5 class="col s12 white-text logo-font" style="text-shadow:rgba(0,0,0,0.2) 0 2px 1px;">{{ site.description }}</h5>
       </div>
       <div class="row center">
-        <a class="btn-flat btn-large waves-effect waves-light indigo lighten-1 logo-font white-text" href="{{ url }}/about/" style="border: 1px #fff solid; margin-right: 4px;">About</a>
-        <a class="btn-flat btn-large waves-effect waves-light indigo lighten-1 logo-font white-text" href="{{ url }}/blog/" style="border: 1px #fff solid; margin-left: 4px;">Blog</a>
+        <a class="btn-flat btn-large waves-effect waves-light green logo-font white-text" href="{{ url }}/about/" style="border: 1px #fff solid; margin-right: 4px;">About</a>
+        <a class="btn-flat btn-large waves-effect waves-light green logo-font white-text" href="{{ url }}/blog/" style="border: 1px #fff solid; margin-left: 4px;">Blog</a>
         <div style="margin-top: 32px;">
-          <a href="#latest-images"><i class="material-icons white-text" style="font-size: 36px;">keyboard_arrow_down</i></a>
+          <a href="#latest-images" class="circle waves-effect waves-light pulse" style="width: 50px; height: 50px;text-align: center"><i class="material-icons white-text" style="font-size: 36px;">keyboard_arrow_down</i></a>
         </div>
       </div>
     </div>
+    </div>
+  </div>
+  <div class="parallax">
+    <img src="{{ site.url }}/assets/img/home.png">
   </div>
 </div>
 
