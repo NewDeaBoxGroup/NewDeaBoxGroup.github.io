@@ -1,19 +1,20 @@
-title: Materialize Jekyll
-description: Materialize Theme for Jekyll, Github Pages
-url: http://astro36.me/Materialize-Jekyll/
-keywords: ["Programming", "Blog"]
+title: NewDeaBoxGroup
+description: NewDeaBox Group blog
+url: http://newdeaboxgroup.github.io/
+keywords: ["NewDeaBox", "Blog"]
 timezone: Asia/Seoul
 permalink: pretty
 
-about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, odio vitae sodales malesuada, nibh diam convallis lectus, non scelerisque arcu lectus non nisi. Etiam tincidunt libero eget urna tristique faucibus. Pellentesque varius mi at placerat lobortis. Donec nec aliquam augue. Cras in gravida urna. Nulla dignissim semper accumsan. Nullam mattis felis metus, nec accumsan lorem porta et. Ut dictum dapibus est. In eu ultricies lorem. Duis semper elementum arcu, in rutrum tellus ornare eu."
+about: "뉴디박 깃헙페이지"
 
 author:
-  disqus: 
-  email: astr36@naver.com
-  github: Astro36 # required
-  google_analytics: UA-77377358-3
-  name: Astro # required
-  telegram: psj1026
+  disqus: newdeaboxgroup
+  email: 
+  github: NewDeaBoxGroup # required
+  google_analytics: UA-79653675-2
+  name: NewDeaBoxGroup # required
+  telegram: newdeabox
+
 
 paginate: 5
 paginate_path: "/blog/page/:num/"
