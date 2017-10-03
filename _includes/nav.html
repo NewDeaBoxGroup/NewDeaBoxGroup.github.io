@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a class="brand-logo logo-font center" href="{{ site.url }}" style="max-width: 50%; max-height: 56px; overflow:hidden;">{{ site.title }}</a>
+      <a class="brand-logo logo-font center" href="{{ site.url }}" style="max-width: 50%; max-height: 56px; overflow:hidden;">{{ site.title | strip_html | truncate: 9, "…" }}</a>
       <a class="button-collapse" data-activates="mobile-nav" href="#"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a class="logo-font" href="{{ site.url }}">Home</a></li>
