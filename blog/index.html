@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
+{% for milestone in site.data.milestone %}{% capture per %}{{ milestone }}{% endcapture %}{% endfor %}
 
 <div class="container">
   <div class="section">
