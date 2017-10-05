@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
@@ -13,7 +14,7 @@ layout: default
             {% if page.image.src %}
             <div class="card-image">
               <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
-              <span class="card-title truncate">{{ page.title | replace: "1#", "[1월 실적]" | replace: "2#", "[2월 실적]" | replace: "3#", "[3월 실적]" | replace: "4#", "[4월 실적]" | replace: "5#", "[5월 실적]" | replace: "6#", "[6월 실적]" | replace: "7#", "[7월 실적]" | replace: "8#", "[8월 실적]" | replace: "9#", "[9월 실적]" | replace: "10#", "[10월 실적]" | replace: "11#", "[11월 실적]" | replace: "12#", "[12월 실적]" }}</span>
+              <span class="card-title truncate" style="padding: 8px 12px;background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); width: 100%;">{{ page.title }}</span>
             </div>
             {% endif %}
             <div class="card-content">
@@ -24,12 +25,11 @@ layout: default
               <p>{{ content | replace: "<img", "<img class='materialboxed'" }}</p>
               {% if page.ccl %}
               <div class="center" style="margin-top: 16px;">
+                <div class="divider" style="margin: 16px 0;"></div>
                 <table>
                   <tr>
                     <td>
-                      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://i.creativecommons.org/l/{{ page.ccl | downcase }}/4.0/88x31.png" alt="크리에이티브 커먼즈 라이선스"></a>
-                    </td>
-                    <td>
+                      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://i.creativecommons.org/l/{{ page.ccl | downcase }}/4.0/88x31.png" alt="크리에이티브 커먼즈 라이선스"></a><br>
                       <span style="font-size: 12px; font-weight: 400; min-height: 31px;">
                         <span rel="dct:type" xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title">{{ page.title }}</span> by <a rel="cc:attributionURL" xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/{{ site.author.github }}" property="cc:attributionName">{{ site.author.name }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/{{ page.ccl | downcase }}/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>
                         {% if site.author.email %}
@@ -64,20 +64,22 @@ layout: default
       <div class="col s12">
         {% if page.next %}
         <div class="left">
-          <a class="btn-floating waves-effect waves-light white" href="{{ url }}{{ page.next.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
+          <a class="btn-floating waves-effect waves-dark white" href="{{ url }}{{ page.next.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
           <span style="color: rgba(0,0,0,.87); margin-left: 8px;">Newer</span>
         </div>
         {% endif %}
         {% if page.previous %}
         <div class="right">
           <span style="color: rgba(0,0,0,.87); margin-right: 8px;">Older</span>
-          <a class="btn-floating waves-effect waves-light white" href="{{ url }}{{ page.previous.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_forward</i></a>
+          <a class="btn-floating waves-effect waves-dark white" href="{{ url }}{{ page.previous.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_forward</i></a>
         </div>
         {% endif %}
       </div>
     </div>
   </div>
 </div>
+
+
 
 {% if site.author.disqus %}
 <script id="dsq-count-scr" src="//{{ site.author.disqus }}.disqus.com/count.js" async></script>

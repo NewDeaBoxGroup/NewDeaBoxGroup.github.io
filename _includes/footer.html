@@ -17,6 +17,25 @@
         {% if site.author.telegram %}
         <li><a class="grey-text text-lighten-3" href="https://t.me/{{ site.author.telegram }}">Telegram</a></li>
         {% endif %}
+        {% if site.author.links %}
+        <li>
+          <h6 class="white-text">Other</h6>
+          <ul>
+            {% if site.author.links.naver %}
+            <li><a class="grey-text text-lighten-3" href="{{ site.author.links.naver }}">&nbsp;&nbsp;Naver Blog</a></li>
+            {% endif %}
+          </ul>
+        </li>
+        {% endif %}
+      </ul>
+      <br>
+      <h5 class="white-text">Recommended Site</h5>
+      <ul>
+        <li><a class="grey-text text-lighten-3" href="https://lumia1108.github.io">Lumia1108's Github Page</a></li>
+        <li><a class="grey-text text-lighten-3" href="http://astro36.me">Astro36's Github Page</a></li>
+        <li><a class="grey-text text-lighten-3" href="http://darktornado.dothome.co.kr">DarkTornado's Home Page</a></li>
+        <li><a class="grey-text text-lighten-3" href="https://kostmedia.github.io">Kostmedia</a></li>
+        <li><a class="grey-text text-lighten-3" href="https://jhsoft18.github.io">Jhsoft</a></li>
       </ul>
     </div>
   </div>
@@ -24,7 +43,7 @@
 
 <div class="footer-copyright">
   <div class="container">
-    © {{ site.time | date: "%Y" }} {{ site.minititle }}. All rights reserved.
+    © {{ site.time | date: "%Y" }} {{ site.author.name }}. All rights reserved.
     <div class="right">
       <span class="white-text" style="font-weight: 400; margin-right: 5px;">View on</span><a class="fa fa-github fa-lg white-text" href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.io"></a>
     </div>
