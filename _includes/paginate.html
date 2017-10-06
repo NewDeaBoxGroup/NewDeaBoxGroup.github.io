@@ -26,7 +26,7 @@
   {% endif %}
   {% for page in (first..last) %}
     {% if page == paginator.page %}
-    <li class="active"><a href="#!">{{ page }}</a></li>
+    <li class="active indigo"><a href="#!">{{ page }}</a></li>
     {% elsif page == 1 %}
     <li class="waves-effect"><a href="{{ url }}/blog">{{ page }}</a></li>
     {% else %}
