@@ -4,13 +4,13 @@
     <div class="card-image">
       <img class="materialboxed" data-caption="© {{ post.image.copyright }}" src="{{ post.image.src }}">
       <span class="card-title" style="background-color: rgba(0,0,0,.3); width: 100%;">
-        {{ post.title | replace: "#긴급", "[긴급 공지]" | replace: "#일반", "[공지]" }}
+        {{ post.title | replace: "#1월", "[1월 실적]" | replace: "#2월", "[2월 실적]" | replace: "#3월", "[3월 실적]" | replace: "#4월", "[4월 실적]" | replace: "#5월", "[5월 실적]" | replace: "#6월", "[6월 실적]" | replace: "#7월", "[7월 실적]" | replace: "#8월", "[8월 실적]" | replace: "#9월", "[9월 실적]" | replace: "#10월", "[10월 실적]" | replace: "#11월", "[11월 실적]" | replace: "#12월", "[12월 실적]" | replace: "#t", "[테스트]" | replace: "#긴급", "[긴급 공지]" | replace: "#일반", "[공지]" }}
       </span>
     </div>
     {% endif %}
     <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ url }}{{ post.url }}'">
       {% unless post.image.src %}
-      <span class="card-title">{{ post.title | replace: "#긴급", "[긴급 공지]" | replace: "#일반", "[공지]" }}</span>
+      <span class="card-title">{{ post.title | replace: "#1월", "[1월 실적]" | replace: "#2월", "[2월 실적]" | replace: "#3월", "[3월 실적]" | replace: "#4월", "[4월 실적]" | replace: "#5월", "[5월 실적]" | replace: "#6월", "[6월 실적]" | replace: "#7월", "[7월 실적]" | replace: "#8월", "[8월 실적]" | replace: "#9월", "[9월 실적]" | replace: "#10월", "[10월 실적]" | replace: "#11월", "[11월 실적]" | replace: "#12월", "[12월 실적]" | replace: "#t", "[테스트]" | replace: "#긴급", "[긴급 공지]" | replace: "#일반", "[공지]" }}</span>
       {% endunless %}
       <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
       <div id="post-content">
