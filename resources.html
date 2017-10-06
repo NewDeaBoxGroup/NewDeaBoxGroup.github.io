@@ -15,7 +15,7 @@ permalink: /resources/
               <ul class="collapsible" data-collapsible="expandable">
                 {% for post in site.posts %} {% if post.image.src %}
                 <li>
-                  <div class="collapsible-header">{{ post.title }}</div>
+                  <div class="collapsible-header">{{ post.title | replace: "#1월", "[1월 실적]" | replace: "#2월", "[2월 실적]" | replace: "#3월", "[3월 실적]" | replace: "#4월", "[4월 실적]" | replace: "#5월", "[5월 실적]" | replace: "#6월", "[6월 실적]" | replace: "#7월", "[7월 실적]" | replace: "#8월", "[8월 실적]" | replace: "#9월", "[9월 실적]" | replace: "#10월", "[10월 실적]" | replace: "#11월", "[11월 실적]" | replace: "#12월", "[12월 실적]" | replace: "#t", "[테스트]" }}</div>
                   <div class="collapsible-body">
                     <img class="materialboxed responsive-img" src="{{ post.image.src }}" alt="{{ post.image.copyright }}">
                   </div>
