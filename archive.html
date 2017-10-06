@@ -18,7 +18,7 @@ permalink: /archive/
               {% for post in site.posts %}
                 <li class="collection-item">
                   <strong><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></strong><br>
-                  <a href="{{ url }}{{ post.url }}">{{ post.title }}</a>
+                  <a href="{{ url }}{{ post.url }}">{{ post.title | replace: "#1월", "[1월 실적]" | replace: "#2월", "[2월 실적]" | replace: "#3월", "[3월 실적]" | replace: "#4월", "[4월 실적]" | replace: "#5월", "[5월 실적]" | replace: "#6월", "[6월 실적]" | replace: "#7월", "[7월 실적]" | replace: "#8월", "[8월 실적]" | replace: "#9월", "[9월 실적]" | replace: "#10월", "[10월 실적]" | replace: "#11월", "[11월 실적]" | replace: "#12월", "[12월 실적]" | replace: "#t", "[테스트]" }}</a>
                 </li>
               {% endfor %}
               </ul>
