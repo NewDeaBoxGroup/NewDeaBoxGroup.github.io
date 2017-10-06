@@ -11,7 +11,7 @@
     $('.parallax').parallax();
     $('time').each(function () {
       if (now - (new Date($(this).attr('datetime')).getTime()) < 311040000){
-        $(this).append('<span class="new badge"></span>');
+        $(this).append('<span class="new badge indigo"></span>');
       }
     });
     var url = window.location.href;
