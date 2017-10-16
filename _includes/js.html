@@ -1,6 +1,5 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="{{ site.url }}/assets/js/materialize.min.js"></script>
-<script type="text/javascript" src="{{ site.url }}/assets/js/clipboard.min.js"></script>
 <script type="text/javascript" src="{{ site.url }}/assets/js/prism.min.js"></script>
 <script type="text/javascript">
   var now = new Date('{{ site.time }}').getTime();
@@ -12,7 +11,7 @@
     $('.parallax').parallax();
     $('time').each(function () {
       if (now - (new Date($(this).attr('datetime')).getTime()) < 311040000){
-        $(this).append('<span class="new badge green"></span>');
+        $(this).append('<span class="new badge indigo"></span>');
       }
     });
     var url = window.location.href;
@@ -20,24 +19,6 @@
       $('#nav-blog').collapsible('open', 0);
     }
   });
-</script>
-<script>
-var clipboard = new Clipboard('.clipboard');
-
-clipboard.on('success', function(e) {
-  console.info('Action:', e.action);
-  console.info('Text:', e.text);
-  console.info('Trigger:', e.trigger);
-  Materialize.toast("<span>Saved to clipboard</span>", 500);
-  
-  e.clearSelection();
-});
-
-clipboard.on('error', function(e) {
-  console.error('Action:', e.action);
-  console.error('Trigger:', e.trigger);
-  Materialize.toast("<span>Failed to save to clipboard</span>", 500);
-});
 </script>
 {% if site.author.google_analytics %}
 <script>

@@ -1,33 +1,32 @@
 <div class="navbar-fixed">
   <nav>
-    <div class="nav-wrapper green darken-3">
+    <div class="nav-wrapper indigo lighten-1">
       <a class="brand-logo logo-font center white-text" href="{{ site.url }}" style="max-width: 50%; max-height: 56px; overflow:hidden;">{{ site.title }}</a>
-      <a class="button-collapse white-text waves-effect" data-activates="mobile-nav" href="#"><i class="material-icons">menu</i></a>
+      <a class="button-collapse white-text" data-activates="mobile-nav" href="#"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="logo-font" href="{{ site.url }}">Home</a></li>
-        <li><a class="logo-font" href="{{ url }}/about/">About</a></li>
-        <li><a class="dropdown-button waves-effect" href="#!" data-activates="dropdown-menu" data-beloworigin="true"><span class="logo-font">Blog</span><i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="logo-font white-text" href="{{ site.url }}">Home</a></li>
+        <li><a class="logo-font white-text" href="{{ url }}/about/">About</a></li>
+        <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown-menu" data-beloworigin="true"><span class="logo-font">Blog</span><i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
   </nav>
 </div>
 
 <ul class="dropdown-content" id="dropdown-menu">
-  <li><a class="waves-effect" href="{{ url }}/blog/">Posts</a></li>
-  <li><a class="waves-effect" href="{{ url }}/archive/">Archive</a></li>
-  <li><a class="waves-effect" href="{{ url }}/categories/">Categories</a></li>
-  <li><a class="waves-effect" href="{{ url }}/tags/">Tags</a></li>
+  <li><a class="logo-font waves-effect" href="{{ url }}/blog/">Posts</a></li>
+  <li><a class="logo-font waves-effect" href="{{ url }}/archive/">Archive</a></li>
+  <li><a class="logo-font waves-effect" href="{{ url }}/categories/">Categories</a></li>
+  <li><a class="logo-font waves-effect" href="{{ url }}/tags/">Tags</a></li>
   <li class="divider"></li>
-  <li><a class="waves-effect" href="{{ url }}/resources/">Resources</a></li>
-  <li><a class="waves-effect" href="{{ url }}/author/NenkaLab">Author</a></li>
+  <li><a class="logo-font waves-effect" href="{{ url }}/resources/">Resources</a></li>
 </ul>
 
 <ul class="side-nav" id="mobile-nav">
   <li>
     <div class="user-view">
-      <div class="background green waves-effect" style="background: url('{{ site.url }}/assets/img/ナナチ3.png') center / cover;"></div>
-      <img class="circle materialboxed waves-effect" data-caption="{{ site.author.name }}" src="https://github.com/{{ site.author.github }}.png">
-      <span class="white-text logo-font name">{{ site.author.name }}</span>
+      <div class="background indigo"></div>
+      <img class="circle materialboxed" data-caption="{{ site.author.name }}" src="https://github.com/{{ site.author.github }}.png">
+      <span class="white-text name">{{ site.author.name }}</span>
       {% if site.author.email %}
       <a href="mailto:{{ site.author.email }}"><span class="white-text email">{{ site.author.email }}</span></a>
       {% endif %}
@@ -38,10 +37,10 @@
   <li class="no-padding">
     <ul class="collapsible collapsible-accordion" id="nav-blog">
       <li>
-        <a class="collapsible-header waves-effect"><time datetime="{{ paginator.posts[0].date }}">Blog</time></a>
+        <a class="collapsible-header waves-effect">Blog</a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="{{ url }}/blog/"><time datetime="{{ paginator.posts[1].date }}">Posts</time></a></li>
+            <li><a href="{{ url }}/blog/">Posts</a></li>
             <li><a href="{{ url }}/archive/">Archive</a></li>
             <li><a href="{{ url }}/categories/">Categories</a></li>
             <li><a href="{{ url }}/tags/">Tags</a></li>
@@ -51,5 +50,4 @@
     </ul>
   </li>
   <li><a class="waves-effect" href="{{ url }}/resources/">Resources</a></li>
-  <li><a class="waves-effect" href="{{ url }}/author/NenkaLab">Author</a></li>
 </ul>
