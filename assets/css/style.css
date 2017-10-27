@@ -1,0 +1,15 @@
+#post-content h1 { font-size: 24px; }
+#post-content h2 { font-size: 22px; }
+#post-content h3 { font-size: 20px; }
+#post-content h4 { font-size: 18px; }
+#post-content h5 { font-size: 16px; }
+#post-content h6 { font-size: 14px; }
+
+.logo-font { font-family: 'Quicksand', sans-serif; }
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto; }
+
+.parallax-container .section { width: 100%; }
