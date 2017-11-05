@@ -1,0 +1,33 @@
+title: NewDeaBox
+description: NDB Blog
+url: https://newdeaboxgroup.github.io
+keywords: ["NDB", "Blog", "NewDeaBox", "NewDeaBoxGroup", "New Dea Box", "New Dea Box Group"]
+timezone: Asia/Seoul
+permalink: pretty
+
+about: "NewDeaBoxGroup Github page"
+
+author:
+  disqus: newdeaboxgroup
+  email: 
+  github: NewDeaBoxGroup # required
+  google_analytics: UA-79653675-2
+  name: NewDeaBoxGroup # required
+  telegram: newdeabox
+
+paginate: 10
+paginate_path: "/blog/page/:num/"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+kramdown:
+  input: GFM
+
+sass:
+  style: compressed
