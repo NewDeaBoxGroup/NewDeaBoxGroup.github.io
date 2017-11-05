@@ -7,11 +7,9 @@ layout: default
 <div class="container">
   <div class="section">
     <div class="row">
-      <div class="col s12">
       {% for post in paginator.posts %}
         {% include post_card.html %}
       {% endfor %}
-      </div>
       <div class="col s12">
         {% include paginate.html %}
       </div>
