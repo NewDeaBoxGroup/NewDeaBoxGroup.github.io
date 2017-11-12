@@ -19,9 +19,11 @@ paginate: 10
 paginate_path: "/blog/page/:num/"
 
 collections:
-  authors:
+  notis:
     output: false
-    permalink: /notis/:path/
+    paginate: 10
+    paginate_path: "/notis/:num/"
+    permalink: "/notis/:path/"
 
 defaults:
   - scope:
