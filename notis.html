@@ -17,9 +17,8 @@ permalink: /notis/
                 <li>
                   <div class="collapsible-header">[Notify] {{ noti.title }}</div>
                   <div class="collapsible-body">
-                    <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}"><small>{{ noti.title }} by {{ noti.author }} | {{ noti.date | date_to_string }}</small></time></p>
-                    <p>{{ noti.content }}</p><br><br>
-                   {% if noti.disqus == yes %} <div>{% include disqus.html %}</div>{% endif %}
+                    <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}"><small>{{ noti.author }} | {{ noti.date | date_to_string }}</small></time></p>
+                    <p>{{ noti.content }}</p>
                   </div>
                 </li>
                 {% endfor %}
