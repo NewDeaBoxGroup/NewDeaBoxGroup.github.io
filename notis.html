@@ -12,23 +12,17 @@ permalink: /notis/
           <div class="card">
             <div class="card-content">
               <span class="card-title">Notify</span>
-              <ul class="collection" data-collapsible="expandable">
+              <ul class="collapsible" data-collapsible="expandable">
                 {% for noti in site.data.notis %}
                 <li>
                   <div class="collapsible-header">[Notify] {{ noti.title }}</div>
                   <div class="collapsible-body">
                     <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}"><small>{{ noti.title }} by {{ noti.author }} | {{ noti.date | date_to_string }}</small></time></p>
                     <p>{{ noti.content }}</p><br><br>
-                    <div>{% include disqus.html %}</div>
+                   {% if noti.disqus == yes %} <div>{% include disqus.html %}</div>{% endif %}
                   </div>
                 </li>
                 {% endfor %}
-                <li>
-                  <div class="collapsible-header">Materialize</div>
-                  <div class="collapsible-body">
-                    <a href="http://materializecss.com/">Materialize</a> is licensed under a <a href="https://github.com/Dogfalo/materialize/blob/master/LICENSE">MIT License</a> by Dogfalo.
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
