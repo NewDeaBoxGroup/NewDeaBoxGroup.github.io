@@ -15,7 +15,7 @@ permalink: /notis/
               <ul class="collapsible" data-collapsible="expandable">
                 {% for noti in site.data.notis %}
                 <li>
-                  <div class="collapsible-header">{{ noti.title }}<time class="right" datetime="{{ noti.date }}"/></div>
+                  <div class="collapsible-header"><texttime class="right" datetime="{{ noti.date }}"/>{{ noti.title }}</div>
                   <div class="collapsible-body">
                     <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}"><small>{{ noti.author }} | {{ noti.date | date_to_string }}</small></time></p>
                     <p>{{ noti.content }}</p>
