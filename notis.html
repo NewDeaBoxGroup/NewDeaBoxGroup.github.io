@@ -8,15 +8,27 @@ permalink: /notis/
   <div class="section">
     <div class="row">
       <div class="col s12">
-      {% for post in paginator.notis %}
-        {% include post_card.html %}
-      {% endfor %}
-      </div>
-      <div class="col s12">
-        {% include paginate.html %}
+        <article>
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Notify</span>
+              <ul class="collection" data-collapsible="expandable">
+                {% for noti in site.data.notis %}
+                <div class="collapsible-header">[Notify] {{ noti.title }}</div>
+                <div class="collapsible-body">
+                  <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}">{{ noti.author }} | {{ noti.date | date_to_string }}</time></p>
+                  <p>{{ noti.content }}</p><br><br>
+                  {% if noti.disqus == yes %}
+                  <div>{% include disqus.html %}</div>
+                  {% endif %}
+                </div>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </div>
 </div>
 
-<script id="dsq-count-scr" src="//newdeaboxgroup.disqus.com/count.js" async></script>
