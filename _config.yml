@@ -18,24 +18,12 @@ author:
 paginate: 10
 paginate_path: "/blog/page/:num/"
 
-collections:
-  notis:
-    output: false
-    paginate: 10
-    paginate_path: "/notis/:num/"
-    permalink: "/notis/:path/"
-
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-      type: "notis"
-    values:
-      layout: "noti"
 
 kramdown:
   input: GFM
