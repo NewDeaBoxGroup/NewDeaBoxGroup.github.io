@@ -14,8 +14,8 @@ layout: default
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
 
-<div class="section no-pad indigo">
-  <div class="valign-wrapper" style="height: 380px;">
+<div class="section no-pad indigo" style="position: relative;">
+  <div class="valign-wrapper" style="height: 380px; position:absolute; top: 0; z-index: 1;">
     <div class="container">
       <h1 class="row center white-text logo-font">{{ site.title }}</h1>
       <div class="row center">
@@ -29,7 +29,32 @@ layout: default
         </div>
       </div>
     </div>
+    <div id="flick" style="height: 380px; position:absolute; top: 0; z-index: 0;>
+      <div style="background-color:#CC66CC">
+		    <p>&nbsp;</p>
+      </div>
+      <div style="background-color:#FF29EE">
+		    <p>&nbsp;</p>
+      </div>
+    </div>
   </div>
+  <script>
+    var f5 = new eg.Flicking($("#mflick5"), {
+    	threshold : 100,
+	    circular : true,
+	    duration : 1000
+    });
+
+    var isStart = false;
+    function start() {
+	    if(isStart) {
+    		f5.next();
+    	}else {
+    		isStart = true;
+	    }
+      setTimeout(start, 5000);
+    } start();
+   </script>    
 </div>
 
 <div class="container">
