@@ -22,8 +22,7 @@ permalink: /notis/
                     <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}"><small>{{ noti.author }} | {{ noti.date | date_to_string }}</small></time></p>
                     <p id="copy">
                       <input type="hidden">
-                        {{ page.title }} | {{ site.title }}<br>
-                        {{ url }}{{ page.url }}<br>
+                        {{ noti.title }}<br>
                         {{ noti.author }} | {{ noti.date | date_to_string }}<br><br>
                       </a>
                       {{ noti.content }}
