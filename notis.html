@@ -19,11 +19,11 @@ permalink: /notis/
                   <div class="collapsible-body">
                     <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}"><small>{{ noti.author }} | {{ noti.date | date_to_string }}</small></time></p>
                     <p id="copy">
-                      <p style="display: none;opacity : 0;">
+                      <a style="display: none;opacity : 0;">
                         {{ page.title }} | {{ site.title }}<br>
                         {{ url }}{{ page.url }}<br>
                         {{ noti.author }} | {{ noti.date | date_to_string }}<br><br>
-                      </p>
+                      </a>
                       {{ noti.content }}
                     </p>
                     {% if noti.copy == true %}
