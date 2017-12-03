@@ -24,7 +24,7 @@ permalink: /notis/
                       <input type="hidden">
                         {{ noti.title }}<br>
                         {{ noti.author }} | {{ noti.date | date_to_string }}<br><br>
-                      </a>
+                      </input>
                       {{ noti.content }}
                     </p>
                     {% if noti.copy == true %}
