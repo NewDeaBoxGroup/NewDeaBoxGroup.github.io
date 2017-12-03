@@ -4,6 +4,8 @@ url: https://newdeaboxgroup.github.io
 keywords: ["NDB", "Blog", "NewDeaBox", "NewDeaBoxGroup", "New Dea Box", "New Dea Box Group", "ndb", "newdeabox", "newdeaboxgroup"]
 timezone: Asia/Seoul
 permalink: pretty
+encoding: utf-8
+incremental: true # Test
 
 about: "NewDeaBoxGroup Github page"
 
