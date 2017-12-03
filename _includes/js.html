@@ -1,5 +1,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egjs/1.5.0/eg.min.js"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/javascript" src="{{ site.url }}/assets/js/materialize.min.js"></script>
 <script type="text/javascript" src="{{ site.url }}/assets/js/clipboard.min.js"></script>
 <script type="text/javascript" src="{{ site.url }}/assets/js/highlight.pack.js"></script>
@@ -55,6 +56,11 @@ clipboard.on('error', function(e) {
   console.error('Action:', e.action);
   console.error('Trigger:', e.trigger);
 });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
 </script>
 <script>
 /* 
