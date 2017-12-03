@@ -21,7 +21,7 @@ permalink: /notis/
                   <div class="collapsible-body">
                     <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}"><small>{{ noti.author }} | {{ noti.date | date_to_string }}</small></time></p>
                     <p id="copy">
-                      <input type="hidden">
+                      <input type="hidden" style="color: white">
                         {{ noti.title }}<br>
                         {{ noti.author }} | {{ noti.date | date_to_string }}<br><br>
                       </input>
