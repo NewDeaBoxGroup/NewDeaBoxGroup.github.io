@@ -29,32 +29,7 @@ layout: default
         </div>
       </div>
     </div>
-    <div id="flick" style="height: 380px; position:absolute; top: 0; z-index: 0;>
-      <div style="background-color:#CC66CC">
-        <p>&nbsp;</p>
-      </div>
-      <div style="background-color:#FF29EE">
-        <p>&nbsp;</p>
-      </div>
-    </div>
   </div>
-  <script>
-    var f5 = new eg.Flicking($("#flick"), {
-        threshold : 100,
-	circular : true,
-        duration : 1000
-    });
-
-    var isStart = false;
-    function start() {
-      if(isStart) {
-        f5.next();
-      }else {
-        isStart = true;
-      }
-      setTimeout(start, 5000);
-    } start();
-   </script>    
 </div>
 
 <div class="container">
