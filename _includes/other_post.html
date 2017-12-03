@@ -1,0 +1,123 @@
+<div class="row">
+  <div class="divider" style="margin: 16px 0;"></div>
+  {% if page.next.next.next %}
+  
+  <div class="col s12 waves-effect waves-dark" onclick="location.href='{{ url }}{{ page.next.next.next.url }}';">
+    {% if page.next.next..next.image.src %}
+    <div class="left">
+      <img src="{{ page.next.next.next.image.src }}" style="width: 80px; height: auto">
+    </div>
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.next.next.next.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.next.next.next.date }}" style="font-size: 16px;">{{ page.next.next.next.date | date_to_string }}</time></p>
+    </div>
+    {% else %}
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.next.next.next.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.next.next.next.date }}" style="font-size: 16px;">{{ page.next.next.next.date | date_to_string }}</time></p>
+    </div>
+    {% endif %}
+  </div>
+  <hr size="1" noshade>
+  {% endif %}
+  {% if page.next.next %}
+  
+  <div class="col s12 waves-effect waves-dark" onclick="location.href='{{ url }}{{ page.next.next.url }}';">
+    {% if page.next.next.image.src %}
+    <div class="left">
+      <img src="{{ page.next.next.image.src }}" style="width: 80px; height: auto">
+    </div>
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.next.next.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.next.next.date }}" style="font-size: 16px;">{{ page.next.next.date | date_to_string }}</time></p>
+    </div>
+    {% else %}
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.next.next.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.next.next.date }}" style="font-size: 16px;">{{ page.next.next.date | date_to_string }}</time></p>
+    </div>
+    {% endif %}
+  </div>
+  <hr size="1" noshade>
+  {% endif %}
+  {% if page.next %}
+  
+  <div class="col s12 waves-effect waves-dark" onclick="location.href='{{ url }}{{ page.next.url }}';">
+    {% if page.next.image.src %}
+    <div class="left">
+      <img src="{{ page.next.image.src }}" style="width: 80px; height: auto">
+    </div>
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.next.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.next.date }}" style="font-size: 16px;">{{ page.next.date | date_to_string }}</time></p>
+    </div>
+    {% else %}
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.next.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.next.date }}" style="font-size: 16px;">{{ page.next.date | date_to_string }}</time></p>
+    </div>
+    {% endif %}
+  </div>
+  
+  {% endif %}
+  {% if page.previous %}
+  <hr size="1" noshade>
+  <div class="col s12 waves-effect waves-dark" onclick="location.href='{{ url }}{{ page.previous.url }}';">
+    {% if page.previous.image.src %}
+    <div class="left">
+      <img src="{{ page.previous.image.src }}" style="width: 80px; height: auto">
+    </div>
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.previous.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.previous.date }}" style="font-size: 16px;">{{ page.previous.date | date_to_string }}</time></p>
+    </div>
+    {% else %}
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.previous.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.previous.date }}" style="font-size: 16px;">{{ page.previous.date | date_to_string }}</time></p>
+    </div>
+    {% endif %}
+  </div>
+  
+  {% endif %}
+  {% if page.previous.previous %}
+  <hr size="1" noshade>
+  <div class="col s12 waves-effect waves-dark" onclick="location.href='{{ url }}{{ page.previous.previous.url }}';">
+    {% if page.previous.previous.image.src %}
+    <div class="left">
+      <img src="{{ page.previous.previous.image.src }}" style="width: 80px; height: auto">
+    </div>
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.previous.previous.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.previous.previous.date }}" style="font-size: 16px;">{{ page.previous.previous.date | date_to_string }}</time></p>
+    </div>
+    {% else %}
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.previous.previous.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.previous.previous.date }}" style="font-size: 16px;">{{ page.previous.previous.date | date_to_string }}</time></p>
+    </div>
+    {% endif %}
+  </div>
+  
+  {% endif %}
+  {% if page.previous.previous.previous %}
+  <hr size="1" noshade>
+  <div class="col s12 waves-effect waves-dark" onclick="location.href='{{ url }}{{ page.previous.previous.previous.url }}';">
+    {% if page.previous.previous.previous.image.src %}
+    <div class="left">
+      <img src="{{ page.previous.previous.previous.image.src }}" style="width: 80px; height: auto">
+    </div>
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.previous.previous.previous.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.previous.previous.previous.date }}" style="font-size: 16px;">{{ page.previous.previous.previous.date | date_to_string }}</time></p>
+    </div>
+    {% else %}
+    <div class="left">
+      <p>&nbsp;&nbsp;{{ page.previous.previous.previous.title }}</p>
+      <p>&nbsp;&nbsp;<time datetime="{{ page.previous.previous.previous.date }}" style="font-size: 16px;">{{ page.previous.previous.previous.date | date_to_string }}</time></p>
+    </div>
+    {% endif %}
+  </div>
+  
+  {% endif %}
+</div>

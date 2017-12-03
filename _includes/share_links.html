@@ -1,0 +1,23 @@
+<div class="container row">
+  <div class="col s1" style="margin: 5px 5px;">
+    <span class="waves-effect waves-dark fa fa-google-plus-official fa-2x fa-fw red-text" onclick="location.href='https://plus.google.com/share?url={{ url }}{{ page.url }}';"></span>
+  </div>
+  <div class="col s1" style="margin: 5px 5px;">
+    <span class="waves-effect waves-dark fa fa-facebook-square fa-2x fa-fw indigo-text" onclick="location.href='https://www.facebook.com/sharer/sharer.php?u={{ url }}{{ page.url }}';"></span>
+  </div>
+  <div class="col s1" style="margin: 5px 5px;">
+    <span class="waves-effect waves-dark fa fa-twitter fa-2x fa-fw light-blue-text" onclick="location.href='https://twitter.com/share?url={{ url }}{{ page.url }}';"></span>
+  </div>
+  <div class="col s1" style="margin: 5px 5px;">
+    <span class="waves-effect waves-dark fa fa-linkedin-square fa-2x fa-fw blue-text" onclick="location.href='https://www.linkedin.com/shareArticle?mini=true&url={{ url }}{{ page.url }}';"></span>
+  </div>
+  <div class="col s1" style="margin: 5px 5px;">
+    <span class="waves-effect waves-dark fa fa-pinterest-square fa-2x fa-fw red-text" onclick="location.href='https://www.pinterest.com/pin/create/button/?url={{ url }}{{ page.url }}';"></span>
+  </div>
+  <div class="col s1" style="margin: 5px 5px;">
+    <span class="waves-effect waves-dark fa fa-envelope-square fa-2x fa-fw black-text" onclick="location.href='mailto:?subject={{ page.title }} | {{ site.title }}&body={{ url }}{{ page.url }}';"></span>
+  </div>
+  <div class="col s1" style="margin: 5px 5px;">
+    <span class="waves-effect waves-dark fa fa-clipboard fa-2x fa-fw black-text copy tooltipped" data-clipboard-text="{{ page.title }} | {{ site.title }} : {{ url }}{{ page.url }}" data-position="bottom" data-delay="50" data-tooltip="Copied!"></span>
+  </div>
+</div>
