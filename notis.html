@@ -18,7 +18,14 @@ permalink: /notis/
                   <div class="collapsible-header"><texttime class="right" datetime="{{ noti.date }}"/>{{ noti.title }}</div>
                   <div class="collapsible-body">
                     <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}"><small>{{ noti.author }} | {{ noti.date | date_to_string }}</small></time></p>
-                    <p id="copy">{{ noti.content }}</p>
+                    <p id="copy">
+                      <p style="display: none;opacity : 0;">
+                        {{ page.title }} | {{ site.title }}<br>
+                        {{ url }}{{ page.url }}<br>
+                        {{ noti.author }} | {{ noti.date | date_to_string }}<br><br>
+                      </p>
+                      {{ noti.content }}
+                    </p>
                     {% if noti.copy == true %}
                     <div class="row">
                       <div class="col s12" style="margin: 5px 5px;right: 0;">
