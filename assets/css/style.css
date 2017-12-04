@@ -13,3 +13,23 @@
   height: auto; }
 
 .parallax-container .section { width: 100%; }
+
+fixed_image_screen {
+  width: 100vw;
+  height: auto;
+}
+
+
+@media screen and (min-width: 540px) and (max-width: 800px) {
+  .fixed_image_screen {
+    width: 540px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .fixed_image_screen {
+    width: 650px;
+    height: auto;
+  }
+}
