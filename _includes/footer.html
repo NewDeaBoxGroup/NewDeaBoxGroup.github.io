@@ -1,21 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col l6 s12">
-      <h5 class="white-text logo-font">{{ site.title }}</h5>
-      <p class="grey-text text-lighten-4">
+      <h5 class="white-text logo-font truncate">{{ site.title }}</h5>
+      <p class="grey-text text-lighten-4 truncate">
         {{ site.description }}<br>
         Designed by <a class="grey-text text-lighten-3" href="https://github.com/Astro36/Materialize-Jekyll">Materialize-Jekyll</a>
       </p>
     </div>
     <div class="col l4 offset-l2 s12">
-      <h5 class="white-text">Links</h5>
+      <h5 class="white-text truncate">Links</h5>
       <ul>
         {% if site.author.email %}
-        <li><a class="grey-text text-lighten-3" href="mailto:{{ site.author.email }}">Email</a></li>
+        <li><a class="grey-text text-lighten-3 truncate" href="mailto:{{ site.author.email }}">Email</a></li>
         {% endif %}
-        <li><a class="grey-text text-lighten-3" href="https://github.com/{{ site.author.github }}">Github</a></li>
+        <li><a class="grey-text text-lighten-3 truncate" href="https://github.com/{{ site.author.github }}">Github</a></li>
         {% if site.author.telegram %}
-        <li><a class="grey-text text-lighten-3" href="https://t.me/{{ site.author.telegram }}">Telegram</a></li>
+        <li><a class="grey-text text-lighten-3 truncate" href="https://t.me/{{ site.author.telegram }}">Telegram</a></li>
         {% endif %}
       </ul>
     </div>
@@ -24,9 +24,9 @@
 
 <div class="footer-copyright">
   <div class="container">
-    © {{ site.time | date: "%Y" }} {{ site.author.name }}. All rights reserved.
+    <span class="truncate">© {{ site.time | date: "%Y" }} {{ site.author.name }}. All rights reserved.</span>
     <div class="right">
-      <span class="white-text" style="font-weight: 400; margin-right: 5px;">View on</span><a class="fa fa-github fa-lg white-text" href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.io"></a>
+      <span class="white-text truncate" style="font-weight: 400; margin-right: 5px;">View on</span><a class="fa fa-github fa-lg white-text" href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.io"></a>
     </div>
   </div>
 </div>
