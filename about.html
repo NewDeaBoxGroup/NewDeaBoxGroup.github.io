@@ -22,7 +22,7 @@ permalink: /about/
               <span class="card-title">Milestone</span>
               <ul class="collection">
               {% for milestone in site.data.milestone %}
-                <li class="collection-item"><strong>{{ milestone.date }}</strong><br>{{ milestone.name }}</li>
+                <li class="collection-item truncate"><strong>{{ milestone.date }}</strong><br>{{ milestone.name }}</li>
               {% endfor %}
               </ul>
             </div>
