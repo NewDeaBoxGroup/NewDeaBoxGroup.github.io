@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
+{% capture assets %}{{ site.assets | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
 
 <html lang="ko">
 <head>
   {% include meta.html %}
+  {% include link.html %}
   {% include css.html %}
 </head>
 
