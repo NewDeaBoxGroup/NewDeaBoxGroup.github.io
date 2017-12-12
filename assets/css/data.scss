@@ -1,0 +1,14 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+---
+
+@charset "UTF-8";
+
+@import "components/color";
+@import "components/data";
+
+
+@import "components/global";
+@import "components/material-dessign-icon";
+@import "components/normalize";
+@import "components/shadow";
