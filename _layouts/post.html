@@ -11,9 +11,19 @@ layout: default
   <article>
     <div class="card" style="width: 100vw;">
       {% if page.image.src %}
-      <div class="card-image">
+      <!--div class="card-image">
         <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
         <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+      </div-->
+      <div class="card-image parallax-container">
+        <div class="parallax">
+          <div class="section no-pad">
+            <div class="valign-wrapper">
+              <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+            </div>
+          </div>
+          <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
+        </div>
       </div>
       {% endif %}
       <div class="card-content row" style="padding: 20px 6vw 20px 6vw;">
