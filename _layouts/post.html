@@ -9,24 +9,26 @@ layout: default
     <div class="row"-->
 <div class="col s12" style="margin: 0 0 20px 0;">
   <article>
+    {% if page.image.src %}
+    <div class="parallax-container">
+      <div class="section no-pad">
+        <div class="valign-wrapper">
+          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+        </div>
+      </div>
+      <div class="parallax">
+        <img src="{{ page.image.src }}" alt="© {{ page.image.copyright }}">
+        <!--img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}"-->
+      </div>
+    </div>
+    {% endif %}
     <div class="card" style="width: 100vw;">
-      {% if page.image.src %}
+      <!--{% if page.image.src %}
       <div class="card-image">
         <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
         <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
       </div>
-      <div class="parallax-container">
-        <div class="section no-pad">
-          <div class="valign-wrapper">
-            <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
-          </div>
-        </div>
-        <div class="parallax">
-          <img src="{{ page.image.src }}" alt="© {{ page.image.copyright }}">
-          <!--img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}"-->
-        </div>
-      </div>
-      {% endif %}
+      {% endif %}-->
       <div class="card-content row" style="padding: 20px 6vw 20px 6vw;">
         {% unless page.image.src %}
         <span class="card-title truncate">{{ page.title }}</span>
