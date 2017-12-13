@@ -13,10 +13,12 @@ layout: default
     <div class="parallax-container">
       <div class="section no-pad">
         <div class="valign-wrapper">
-          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+          <div class="container">
+            <span class="row center white-text logo-font truncate" style="text-shadow:rgba(0, 0, 0, 0.2) 0 2px 1px; background: rgba(0, 0, 0, 0.2); width: 100%; height: 350px;">{{ page.title }}</span>
+          </div>
         </div>
       </div>
-      <div class="parallax">
+      <div class="parallax" style="height: 350px;">
         <img src="{{ page.image.src }}" alt="© {{ page.image.copyright }}">
         <!--img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}"-->
       </div>
