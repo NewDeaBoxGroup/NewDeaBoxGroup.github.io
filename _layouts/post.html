@@ -9,29 +9,28 @@ layout: default
     <div class="row"-->
 <div class="col s12" style="margin: 0 0 20px 0;">
   <article>
-    {% if page.image.src %}
+    <!--{% if page.image.src %}
     <div class="parallax-container">
       <div class="section no-pad">
         <div class="valign-wrapper" style="height: 380px; background: rgba(0, 0, 0, 0.2);">
           <div class="container">
-            <h4 class="row center white-text logo-font" style="text-align:center; text-shadow:rgba(0, 0, 0, 0.2) 0 2px 1px; width: 100%; height: 100%;">{{ page.title }}</h4><!-- false truncate -->
+            <h4 class="row center white-text logo-font" style="text-align:center; text-shadow:rgba(0, 0, 0, 0.2) 0 2px 1px; width: 100%; height: 100%;">{{ page.title }}</h4>
           </div>
         </div>
       </div>
       <div class="parallax" style="height: 250px;">
         <img src="{{ page.image.src }}" alt="© {{ page.image.copyright }}">
-        <!--img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}"-->
       </div>
     </div>
-    {% endif %}
+    {% endif %}-->
     <div class="card" style="width: 100vw;">
-      <!--{% if page.image.src %}
-      <div class="card-image">
-        <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
-        <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
-      </div>
-      {% endif %}-->
       <div class="card-content row" style="padding: 20px 6vw 20px 6vw;">
+        {% if page.image.src %}
+        <div class="card-image">
+          <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
+          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+        </div>
+        {% endif %}
         {% unless page.image.src %}
         <span class="card-title truncate">{{ page.title }}</span>
         {% endunless %}
