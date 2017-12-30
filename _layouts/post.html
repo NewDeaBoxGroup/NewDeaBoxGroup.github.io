@@ -32,7 +32,9 @@ layout: default
       {% endif %}
       <div class="card-content row" style="padding: 20px 6vw 20px 6vw;">
         {% unless page.image.src %}
-        <span class="card-title truncate">{{ page.title }}</span>
+        <div class="container">
+          <span class="card-title truncate">{{ page.title }}</span>
+        </div>
         {% endunless %}
         <div class="container">
           <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ page.date | date_to_string }}</time>{% if site.author.disqus %} | <a href="{{ url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>{% endif %}</p>
