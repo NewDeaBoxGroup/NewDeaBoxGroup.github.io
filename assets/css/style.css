@@ -17,28 +17,3 @@
 #fixed_image_screen {
   width: 100%;
   height: auto; }
-
-@media screen and (min-width: 0px) and (max-width: 539px) {
-  #fixed_image_screen {
-    width: 100%;
-    height: auto; } }
-
-@media screen and (min-width: 540px) and (max-width: 799px) {
-  #fixed_image_screen {
-    width: 540px;
-    height: auto; } }
-
-@media screen and (min-width: 800px) and (max-width: 999px) {
-  #fixed_image_screen {
-    width: 650px;
-    height: auto; } }
-
-@media screen and (min-width: 1000px) and (max-width: 1999px) {
-  #fixed_image_screen {
-    width: 800px;
-    height: auto; } }
-
-@media screen and (min-width: 2000px) and (max-width: 2999px) {
-  #fixed_image_screen {
-    width: 1000px;
-    height: auto; } 
