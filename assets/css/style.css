@@ -6,6 +6,7 @@
 #post-content h6 { font-size: 14px; }
 
 .logo-font { font-family: 'Unbuntu', sans-serif; }
+html, body, main { overflow-x: hidden; }
 
 .parallax-container {
   min-height: 380px;
