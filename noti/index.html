@@ -7,7 +7,7 @@ layout: default
 <div class="container">
   <div class="section">
     <div class="row">
-      {% for noti in site.notis.paginator.notis %}
+      {% for noti in paginator.notis %}
         {% include noti_card.html %}
       {% endfor %}
       <div class="col s12">
