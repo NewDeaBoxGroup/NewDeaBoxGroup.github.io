@@ -5,7 +5,7 @@
   <li class="waves-effect"><a href="{{ url }}/noti"><i class="material-icons">first_page</i></a></li>
   {% endif %}
 
-  {% if notis.paginator.previous_page %}
+  {% if paginator.previous_page %}
   <li class="waves-effect"><a href="{{ paginator.previous_page_path }}"><i class="material-icons">chevron_left</i></a></li>
   {% else %}
   <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
