@@ -1,0 +1,29 @@
+<div class="col s12 m6">
+  <article>
+    <div class="card">
+      {% if noti.image.src %}
+      <div class="card-image">
+        <img class="materialboxed" data-caption="© {{ noti.image.copyright }}" src="{{ noti.image.src }}">
+        <span class="card-title truncate" style="background-color: rgba(0,0,0,.5); width: 100%;">
+          [공지]{{ noti.title }}
+        </span>
+      </div>
+      {% endif %}
+      <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ url }}{{ noti.url }}'">
+        {% unless noti.image.src %}
+        <span class="card-title truncate">[공지]{{ noti.title }}</span>
+        {% endunless %}
+        <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ noti.date }}">{{ noti.date | date_to_string }}</time></p>
+        <div id="post-content truncate">
+          {{ noti.content | strip_html | truncate: 100, "…" }}
+        </div>
+        {% if site.author.disqus %}
+        <div class="valign-wrapper" style="margin-top: 16px;">
+          <i class="material-icons" style="color: #9e9e9e;">comment</i>&nbsp;
+          <span class="disqus-comment-count truncate" data-disqus-identifier="{{ noti.id }}" data-disqus-url="{{ url }}{{ noti.url }}">Comment</span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</div>
