@@ -36,7 +36,7 @@ defaults:
       path: ""
       type: "notis"
     values:
-      layout: "noti"
+      layout: "post"
 
 kramdown:
   input: GFM
