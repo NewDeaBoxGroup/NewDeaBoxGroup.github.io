@@ -8,7 +8,7 @@ layout: default
   <div class="section">
     <div class="row">
       {% for noti in paginator.posts %}
-        {% if noti.noti == true %}
+        {% if noti.noti %}
           {% include noti_card.html %}
         {% endif %}
       {% endfor %}
