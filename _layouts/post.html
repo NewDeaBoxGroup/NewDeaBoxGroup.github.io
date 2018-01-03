@@ -3,99 +3,102 @@ layout: default
 ---
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
-
-<!--div class="container">
-  <div class="section">
-    <div class="row"-->
-<div class="col s12" style="margin: 0 0 20px 0;">
-  <article>
-    <!--{% if page.image.src %}
-    <div class="parallax-container">
-      <div class="section no-pad">
-        <div class="valign-wrapper" style="height: 380px; background: rgba(0, 0, 0, 0.2);">
-          <div class="container">
-            <h4 class="row center white-text logo-font" style="text-align:center; text-shadow:rgba(0, 0, 0, 0.2) 0 2px 1px; width: 100%; height: 100%;">{{ page.title }}</h4>
-          </div>
-        </div>
-      </div>
-      <div class="parallax" style="height: 250px;">
-        <img src="{{ page.image.src }}" alt="© {{ page.image.copyright }}">
-      </div>
-    </div>
-    {% endif %}-->
-    <div class="card" style="width: 100vw;">
-      {% if page.image.src %}
-      <div class="card-image">
-        <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
-        <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
-      </div>
-      {% endif %}
-      <div class="card-content row" style="padding: 20px 6vw 20px 6vw;">
-        {% unless page.image.src %}
-        <div class="container">
-          <span class="card-title truncate">{{ page.title }}</span>
-        </div>
-        {% endunless %}
-        <div class="container">
-          <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ page.date | date_to_string }}</time>{% if site.author.disqus %} | <a href="{{ url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>{% endif %}</p>
-          <p>{{ content | replace: "<img", "<img id='fixed_image_screen' class='materialboxed'" }}</p>
-        </div>
-        {% if page.ccl %}
-        <div class="center" style="margin-top: 16px;">
-          <table>
-            <tr>
-              <td>
-                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://i.creativecommons.org/l/{{ page.ccl | downcase }}/4.0/88x31.png" alt="크리에이티브 커먼즈 라이선스"></a>
-              </td>
-              <td>
-                <span style="font-size: 12px; font-weight: 400; min-height: 31px;">
-                  <span rel="dct:type" xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title">{{ page.title }}</span> by <a rel="cc:attributionURL" xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/{{ site.author.github }}" property="cc:attributionName">{{ site.author.name }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/{{ page.ccl | downcase }}/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>
-                  {% if site.author.email %}
-                  Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:{{ site.author.email }}" rel="cc:morePermissions">{{ site.author.email }}</a>."
-                  {% endif %}
-                </span>
-              </td>
-            </tr>
-          </table>
+<div class="row">
+  <div class="col s12 l8"> <!-- style="margin: 0 0 20px 0;" -->
+    <article>
+      <div class="card" style="width: 100vw;">
+        {% if page.image.src %}
+        <div class="card-image">
+          <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
+          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
         </div>
         {% endif %}
-        <div class="divider" style="margin: 16px 0;"></div>
-        {% for tag in page.tags %}
-        <div class="chip">{{ tag }}</div>
-        {% endfor %}
-        <div class="divider" style="margin: 16px 0;"></div>
-        <div class="container">
-          {% include share_links.html %}
-        </div?
+        <div class="card-content row" style="padding: 20px 6vw 20px 6vw;">
+          {% unless page.image.src %}
+          <div class="container">
+            <span class="card-title truncate">{{ page.title }}</span>
+          </div>
+          {% endunless %}
+          <div class="container">
+            <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ page.date | date_to_string }}</time>{% if site.author.disqus %} | <a href="{{ url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a>{% endif %}</p>
+            <p>{{ content | replace: "<img", "<img id='fixed_image_screen' class='materialboxed'" }}</p>
+          </div>
+          {% if page.ccl %}
+          <div class="center" style="margin-top: 16px;">
+            <table>
+              <tr>
+                <td>
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://i.creativecommons.org/l/{{ page.ccl | downcase }}/4.0/88x31.png" alt="크리에이티브 커먼즈 라이선스"></a>
+                </td>
+                <td>
+                  <span style="font-size: 12px; font-weight: 400; min-height: 31px;">
+                    <span rel="dct:type" xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title">{{ page.title }}</span> by <a rel="cc:attributionURL" xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/{{ site.author.github }}" property="cc:attributionName">{{ site.author.name }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/{{ page.ccl | downcase }}/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>
+                    {% if site.author.email %}
+                    Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:{{ site.author.email }}" rel="cc:morePermissions">{{ site.author.email }}</a>."
+                    {% endif %}
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          {% endif %}
+          <div class="divider" style="margin: 16px 0;"></div>
+          {% for tag in page.tags %}
+          <div class="chip">{{ tag }}</div>
+          {% endfor %}
+          <div class="divider" style="margin: 16px 0;"></div>
+          <div class="container">
+            {% include share_links.html %}
+          </div?
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="col s12 l4">
+    {% if page.author %}
+    <div class="col s12">
+      <article>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://github.com/{{ page.author }}.png" alt="Uploader" style="width: 128px; margin: 8px;">
+          </div>
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <span class="card-title truncate">{{ page.author }}</span>
+            <p class="truncate">{{ page.description }}</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% endif %}
+    {% if site.author.disqus %}
+    <div class="col s12l4">
+      <article>
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Comments</span>
+            {% include disqus.html %}
+          </div>
+        </div>
+      </article>
+    </div>
+    {% endif %}
+    <div class="col s12 l4">
+      <article>
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Other Post</span>
+            {% include other_post.html %}
+          </div>
+          </div>
+        </article>
       </div>
     </div>
-  </article>
-</div>
+  </div>
 <div class="container">
   <div class="section">
     <div class="row">
-      {% if site.author.disqus %}
-      <div class="col s12 m6">
-        <article>
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Comments</span>
-              {% include disqus.html %}
-            </div>
-          </div>
-        </article>
-      </div>
-      {% endif %}
-      <div class="col s12 m6">
-        <article>
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Other Post</span>
-              {% include other_post.html %}
-            </div>
-          </div>
-        </article>
-      </div>
       <div class="col s12">
         {% if page.next %}
         <div class="left">
