@@ -72,6 +72,16 @@ layout: default
       </article>
     </div>
     {% endif %}
+    <div class="col s12">
+      <article>
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Other Post</span>
+            {% include other_post.html %}
+          </div>
+        </div>
+      </article>
+    </div>
     {% if site.author.disqus %}
     <div class="col s12">
       <article>
@@ -84,18 +94,8 @@ layout: default
       </article>
     </div>
     {% endif %}
-    <div class="col s12">
-      <article>
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">Other Post</span>
-            {% include other_post.html %}
-          </div>
-          </div>
-        </article>
-      </div>
-    </div>
   </div>
+</div>
 <div class="container">
   <div class="section">
     <div class="row">
