@@ -29,18 +29,24 @@
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script type='text/javascript'>
     Kakao.init('3f49370e6e422469ea7982743324d936');
-    Kakao.Link.createTalkLinkButton({
-        container: '#kakao-link-btn',
-        label: "{{ page.title }}",
-        url: "{{ url }}{{ page.url | append: "$" | replace: "/$", "" | replace: "$", "" }}",
-        image: {
-            src: "https://github.com/{{ page.author }}.png", 
-            width: "120", 
-            height: "120"
-        },
-        webButton: {
-            text: "이동하기", 
-            url: "{{ url }}{{ page.url | append: "$" | replace: "/$", "" | replace: "$", "" }}"
+    Kakao.Link.createDefaultButton({
+      container: '#kakao-link-btn',
+      content: {
+        title: '{{ page.title }}',
+        description: '{{ page.description }}',
+        imageUrl: 'https://github.com/{{ page.author }}.png',
+        link: {
+          mobileWebUrl: '{{ url }}{{ page.url | append: "$" | replace: "/$", "" | replace: "$", "" }}',
+          webUrl: '{{ url }}{{ page.url | append: "$" | replace: "/$", "" | replace: "$", "" }}'
         }
+      },
+      buttons: [{
+          title: '바로가기',
+          link: {
+            mobileWebUrl: '{{ url }}{{ page.url | append: "$" | replace: "/$", "" | replace: "$", "" }}',
+            webUrl: '{{ url }}{{ page.url | append: "$" | replace: "/$", "" | replace: "$", "" }}'
+          }
+        }
+      ]
     });
 </script>
