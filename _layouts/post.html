@@ -6,7 +6,19 @@ layout: default
 <div class="row">
   <div class="col s12 l9"> <!-- style="margin: 0 0 20px 0;" -->
     {% if page.category %}
-    {% if page.category == "Noti" or page.category == "Notify" or page.category == "Notice" or page.category == "noti" or page.category == "notice" or page.category == "notify" %}
+    {% if page.category == "Noti" %}
+    <div class="col s12">
+      <article>
+        <div class="card horizontal red darken-1">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p class="truncate white-text">이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% elsif page.category == "Notice" %}
     <div class="col s12">
       <article>
         <div class="card horizontal red darken-1">
