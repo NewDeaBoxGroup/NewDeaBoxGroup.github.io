@@ -32,6 +32,7 @@
     Kakao.Link.createTalkLinkButton({
         container: '#kakao-link-btn',
         label: "{{ page.title }}",
+        url: "{{ url }}{{ page.url | append: "$" | replace: "/$", "" | replace: "$", "" }}",
         image: {
             src: "https://github.com/{{ page.author }}.png", 
             width: "120", 
