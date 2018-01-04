@@ -25,9 +25,9 @@ image:<br>
 ---
 </code></pre>
 
-##### 2. 그 밑으로는 자유롭게 HTML, Marldown코드를 이용하여 작성해 줍니다. <br>
+##### 2. 그 밑으로는 자유롭게 HTML, Markdown코드를 이용하여 작성해 줍니다. <br>
 <pre><code class="html">
 Hello, World! &lt;br&gt;<br>
-안녕, 세계!<br>
+안녕, 세계!&lt;br&gt;<br>
 ![링크](http://example.com)
 </code></pre>
