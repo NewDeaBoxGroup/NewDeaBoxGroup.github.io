@@ -20,4 +20,38 @@
   <div class="col s1" style="margin: 5px 5px;">
     <span class="waves-effect waves-dark fa fa-clipboard fa-2x fa-fw black-text copy tooltipped" data-clipboard-text="{{ page.title }} | {{ site.title }} : {{ url }}{{ page.url }}" data-position="bottom" data-delay="50" data-tooltip="Copied!"></span>
   </div>
+  <div class="col s1" style="margin: 5px 5px;">
+    <a id="kakao-link-btn" href="javascript:;">
+      <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+    </a>
+  </div>
 </div>
+
+<script type='text/javascript'>
+  //<![CDATA[
+    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('3f49370e6e422469ea7982743324d936');
+    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    Kakao.Link.createDefaultButton({
+      container: '#kakao-link-btn',
+      objectType: 'feed',
+      content: {
+        title: '{{ page.title }}',
+        description: '{{ page.description }}',
+        imageUrl: 'https://github.com/{{ page.author }}.png',
+        link: {
+          mobileWebUrl: '{{ url }}{{ page.url }}',
+          webUrl: '{{ url }}{{ page.url }}'
+        }
+      },
+      buttons: [{
+          title: '바로가기',
+          link: {
+            mobileWebUrl: '{{ url }}{{ page.url }}',
+            webUrl: '{{ url }}{{ page.url }}'
+          }
+        }
+      ]
+    });
+  //]]>
+</script>
