@@ -34,11 +34,11 @@
         label: "{{ page.title }}",
         image: {
             src: "{% if page.image %}{{ page.image.src }}{% else %}https://github.com/{{ page.author }}.png{% endif %}", 
-            width: "120", 
-            height: "120"
+            width: "50", 
+            height: "50"
         },
         webButton: {
-            text: "안녕", 
+            text: "", 
             url: "{{ url }}{{ page.url }}index.html"
         }
     });
