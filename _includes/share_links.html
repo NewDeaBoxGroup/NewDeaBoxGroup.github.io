@@ -32,6 +32,11 @@
     Kakao.Link.createTalkLinkButton({
         container: '#kakao-link-btn',
         label: "{{ page.title }}",
+        image: {
+            src: "{% if page.image %}{{ page.image.url }}{% else %}https://github.com/{{ page.author }}.png{% endif %}", 
+            width: "120", 
+            height: "120"
+        },
         webButton: {
             text: "안녕", 
             url: "{{ url }}{{ page.url }}index.html"
