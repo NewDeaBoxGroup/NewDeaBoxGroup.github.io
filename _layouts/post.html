@@ -69,6 +69,22 @@ layout: default
     </div>
   </div>
   <div class="col s12 l3">
+    {% if page.category %}
+    {% if page.category == "Noti" %}
+    <div class="col s12">
+      <article>
+        <div class="card horizontal red darken-1">
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title truncate white-text">공지</span>
+              <p class="truncate white-text">이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% endif %}
+    {% endif %}
     {% if page.author %}
     <div class="col s12">
       <article>
@@ -79,7 +95,7 @@ layout: default
           <div class="card-stacked">
             <div class="card-content">
               <span class="card-title truncate">{{ page.author }}</span>
-              <p class="truncate"></p>{% if page.description %}{{ page.description }}{% else %}내용이 없네요....{% endif %}</p>
+              <p class="truncate">{% if page.description %}{{ page.description }}{% else %}내용이 없네요....{% endif %}</p>
             </div>
           </div>
         </div>
