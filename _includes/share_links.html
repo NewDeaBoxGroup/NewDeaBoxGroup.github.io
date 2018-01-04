@@ -28,30 +28,18 @@
 </div>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script type='text/javascript'>
-  //<![CDATA[
-    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
     Kakao.init('3f49370e6e422469ea7982743324d936');
-    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-    Kakao.Link.createDefaultButton({
-      container: '#kakao-link-btn',
-      objectType: 'feed',
-      content: {
-        title: '{{ page.title }}',
-        description: '{{ page.description }}',
-        imageUrl: 'https://github.com/{{ page.author }}.png',
-        link: {
-          mobileWebUrl: '{{ url }}{{ page.url }}',
-          webUrl: '{{ url }}{{ page.url }}'
+    Kakao.Link.createTalkLinkButton({
+        container: '#kakao-link-btn',
+        label: "NewDeaBoxGroup",
+        image: {
+            src: "https://www.dropbox.com/s/qv0ia871qdtmeuo/NewdeaBox_Group_Logo.png?dl=1", 
+            width: "120", 
+            height: "120"
+        },
+        webButton: {
+            text: "안녕", 
+            url: "https://newdeaboxgroup.github.io/test/2017/12/03/mathtest/"
         }
-      },
-      buttons: [{
-          title: '바로가기',
-          link: {
-            mobileWebUrl: '{{ url }}{{ page.url }}',
-            webUrl: '{{ url }}{{ page.url }}'
-          }
-        }
-      ]
     });
-  //]]>
 </script>
