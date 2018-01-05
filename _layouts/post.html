@@ -5,21 +5,6 @@ layout: default
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
 <div class="row">
   <div class="col s12 l9"> <!-- style="margin: 0 0 20px 0;" -->
-    {% if page.category %}
-    {% if page.category == "Noti" %}
-    <div class="col s12">
-      <article>
-        <div class="card horizontal red darken-1">
-          <div class="card-stacked">
-            <div class="card-content">
-              <p class="truncate white-text"><span class="card-title">공지</span>이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-    {% endif %}
-    {% endif %}
     <article>
       <div class="card">
         {% if page.image.src %}
@@ -84,6 +69,69 @@ layout: default
     </div>
   </div>
   <div class="col s12 l3">
+    {% if page.category %}
+    {% if page.category == "Noti" %}
+    <div class="col s12">
+      <article>
+        <div class="card horizontal red darken-1">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p class="truncate white-text">이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% elsif page.category == "Notice" %}
+    <div class="col s12">
+      <article>
+        <div class="card horizontal red darken-1">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p class="truncate white-text">이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% elsif page.category == "notice" %}
+    <div class="col s12">
+      <article>
+        <div class="card horizontal red darken-1">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p class="truncate white-text">이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% elsif page.category == "noti" %}
+    <div class="col s12">
+      <article>
+        <div class="card horizontal red darken-1">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p class="truncate white-text">이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% elsif page.category == "공지" %}
+    <div class="col s12">
+      <article>
+        <div class="card horizontal red darken-1">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p class="truncate white-text">이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% endif %}}
+    {% endif %}
     {% if page.author %}
     <div class="col s12">
       <article>
