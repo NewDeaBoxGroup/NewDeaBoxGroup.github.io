@@ -136,3 +136,12 @@ Assumes Mozilla naming conventions instead of W3C for now
 	window.fullScreenApi = fullScreenApi;	
 })();
 </script>
+<script>
+	with ((console && console._commandLineAPI) || {}) {
+		Object.defineProperty(console, '_commandLineAPI', { 
+			get : function() { 
+				throw '콘솔을 사용할 수 없습니다.' 
+			} 
+		});
+	}
+</script>
