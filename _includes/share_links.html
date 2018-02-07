@@ -41,11 +41,11 @@
     Kakao.Link.createTalkLinkButton({
       container: '#kakao-link-btn',
 	    label: "{{ page.title }}",
-      image: {
+     {% if page.image %} image: {
         src: '{{ page.image.src }}',
 	      width: 300,
 	      height: 300
-      },
+      },{% endif %}
       webButton: {
         text: 'appsoulute',
         url: '{{ url }}{{ page.url }}'
