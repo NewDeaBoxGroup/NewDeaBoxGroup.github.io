@@ -40,14 +40,14 @@
     
     Kakao.Link.createTalkLinkButton({
       container: '#kakao-link-btn',
-	    label: "{{ page.title }}",
+	    label: "{% if page.description %}{{ page.description }}{% endif %}",
      {% if page.image %} image: {
         src: '{{ page.image.src }}',
 	      width: 300,
 	      height: 300
       },{% endif %}
       webButton: {
-        text: '바로가기',
+        text: '{{ page.title }}',
         url: '{{ url }}{{ page.url }}'
       }
     });
