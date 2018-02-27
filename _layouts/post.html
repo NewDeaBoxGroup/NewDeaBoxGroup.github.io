@@ -65,23 +65,7 @@ layout: default
         </div>
       </div>
     </article>
-    <div class="col s12">
-      {% if page.next %}
-      <div class="left">
-        <a class="btn-floating waves-effect waves-dark white" href="{{ url }}{{ page.next.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
-        <span style="color: rgba(0,0,0,.87); margin-left: 8px;">Newer</span>
-      </div>
-      {% endif %}
-      {% if page.previous %}
-      <div class="right">
-        <span style="color: rgba(0,0,0,.87); margin-right: 8px;">Older</span>
-        <a class="btn-floating waves-effect waves-dark white" href="{{ url }}{{ page.previous.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_forward</i></a>
-      </div>
-      {% endif %}
-    </div>
-  </div>
-  <div class="col s12 l3">
-    {% if page.author %}
+	{% if page.author %}
     <div class="col s12">
       <article>
         <div class="card horizontal">
@@ -98,6 +82,22 @@ layout: default
       </article>
     </div>
     {% endif %}
+    <div class="col s12">
+      {% if page.next %}
+      <div class="left">
+        <a class="btn-floating waves-effect waves-dark white" href="{{ url }}{{ page.next.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
+        <span style="color: rgba(0,0,0,.87); margin-left: 8px;">Newer</span>
+      </div>
+      {% endif %}
+      {% if page.previous %}
+      <div class="right">
+        <span style="color: rgba(0,0,0,.87); margin-right: 8px;">Older</span>
+        <a class="btn-floating waves-effect waves-dark white" href="{{ url }}{{ page.previous.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_forward</i></a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="col s12 l3">
     <div class="col s12">
       <article>
         <div class="card">
