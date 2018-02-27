@@ -4,82 +4,31 @@ layout: default
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
 <div class="row">
-  {% if page.category %}
-  {% if page.category == "Noti" %}
-  <div class="col s12">
-    <article>
-      <div class="card horizontal red darken-1">
-        <div class="card-stacked">
-          <div class="card-content">
-            <p class="truncate white-text">이 글은 공지사항 입니다<br>꼼꼼히 읽어 주시기 바랍니다</p>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  {% elsif page.category == "Notice" %}
-  <div class="col s12">
-    <article>
-      <div class="card horizontal red darken-1">
-        <div class="card-stacked">
-          <div class="card-content">
-            <p class="truncate white-text">이 글은 공지사항 입니다 꼼꼼히 읽어 주시기 바랍니다</p>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  {% elsif page.category == "notice" %}
-  <div class="col s12">
-    <article>
-      <div class="card horizontal red darken-1">
-        <div class="card-stacked">
-          <div class="card-content">
-            <p class="truncate white-text">이 글은 공지사항 입니다 꼼꼼히 읽어 주시기 바랍니다</p>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  {% elsif page.category == "noti" %}
-  <div class="col s12">
-    <article>
-      <div class="card horizontal red darken-1">
-        <div class="card-stacked">
-          <div class="card-content">
-            <p class="truncate white-text">이 글은 공지사항 입니다 꼼꼼히 읽어 주시기 바랍니다</p>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  {% elsif page.category == "공지" %}
-  <div class="col s12">
-    <article>
-      <div class="card horizontal red darken-1">
-        <div class="card-stacked">
-          <div class="card-content">
-            <p class="truncate white-text">이 글은 공지사항 입니다 꼼꼼히 읽어 주시기 바랍니다</p>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  {% endif %}
-  {% endif %}
   <div class="col s12 l9"> <!-- style="margin: 0 0 20px 0;" -->
     <article>
       <div class="card">
         {% if page.image.src %}
         <div class="card-image">
           <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
-          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+		  {% if page.category %}
+		  {% if page.category == "Noti" %}
+          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;"><ruby>{{ page.title }}<rp>(</rp><rt>공지</rt><rp>)</rp></ruby></span>
+		  {% else %}
+		  <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+		  {% endif %}
+		  {% endif %}
         </div>
         {% endif %}
         <div class="card-content row" style="padding: 20px 6vw 20px 6vw;">
           {% unless page.image.src %}
           <div class="container">
-            <span class="card-title truncate">{{ page.title }}</span>
+            {% if page.category %}
+			{% if page.category == "Noti" %}
+			<span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;"><ruby>{{ page.title }}<rp>(</rp><rt>공지</rt><rp>)</rp></ruby></span>
+			{% else %}
+			<span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+			{% endif %}
+			{% endif %}
           </div>
           {% endunless %}
           <div class="container">
