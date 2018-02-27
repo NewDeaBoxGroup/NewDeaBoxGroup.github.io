@@ -12,7 +12,7 @@ layout: default
           <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
           {% if page.category %}
           {% if page.category == "Noti" %}
-          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;"><ruby>{{ page.title }}<rp>(</rp><rt>공지</rt><rp>)</rp></ruby></span>
+          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">[공지]{{ page.title }}</span>
           {% else %}
           <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
           {% endif %}
@@ -24,9 +24,9 @@ layout: default
           <div class="container">
             {% if page.category %}
             {% if page.category == "Noti" %}
-            <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;"><ruby>{{ page.title }}<rp>(</rp><rt>공지</rt><rp>)</rp></ruby></span>
+            <span class="card-title truncate">[공지]{{ page.title }}</span>
             {% else %}
-            <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+            <span class="card-title truncate">{{ page.title }}</span>
             {% endif %}
             {% endif %}
           </div>
