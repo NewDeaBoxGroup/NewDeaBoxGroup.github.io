@@ -10,13 +10,13 @@ layout: default
         {% if page.image.src %}
         <div class="card-image">
           <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
-            {% if page.category %}
-            {% if page.category == "Noti" %}
-            <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;"><ruby>{{ page.title }}<rp>(</rp><rt>공지</rt><rp>)</rp></ruby></span>
-            {% else %}
-            <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
-            {% endif %}
-            {% endif %}
+          {% if page.category %}
+          {% if page.category == "Noti" %}
+          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;"><ruby>{{ page.title }}<rp>(</rp><rt>공지</rt><rp>)</rp></ruby></span>
+          {% else %}
+          <span class="card-title truncate" style="background: rgba(0, 0, 0, .5); width: 100%;">{{ page.title }}</span>
+          {% endif %}
+          {% endif %}
         </div>
         {% endif %}
         <div class="card-content row" style="padding: 20px 6vw 20px 6vw;">
