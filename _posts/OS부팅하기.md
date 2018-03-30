@@ -1,7 +1,7 @@
 ---
 title: "OS부팅하기"
 author: PatrickNaver
-date: 2018-03-30 15:59
+date: 2018-03-30 23:02
 category: Report
 tags: ["OS", "어셈블리어", "부팅"]
 description:  OS 부팅하기
