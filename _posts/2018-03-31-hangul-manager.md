@@ -17,3 +17,5 @@ font-family: 'Nanum Pen Script', cursive;
 </style>
 
 <p class="fontTest">업뎃입니다.</p>
+
+<del class="fontTest"> 곧 올림</del>
