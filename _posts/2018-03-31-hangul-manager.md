@@ -15,7 +15,10 @@ tags: ["Programming", "Android", "Java", "Kotlin"]
 font-family: 'Nanum Pen Script', cursive;
 }
 </style>
+<h1>
 
 <p class="fontTest">업뎃입니다.</p>
 
 <del class="fontTest"> 곧 올림</del>
+
+</h1>
